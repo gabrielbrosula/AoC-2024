@@ -1,0 +1,4 @@
+This is an example text file.
+I want to read this file inside of Python.
+Here's a third line.
+1234567891011121314151617181920
