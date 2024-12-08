@@ -1,5 +1,5 @@
 def main():
-    filename = "1.txt"
+    filename = "./input/1.txt"
     left = []
     right = []
     with open(filename, "r") as file:

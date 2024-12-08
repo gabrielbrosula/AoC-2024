@@ -40,7 +40,7 @@ def isArrSafe_p2(int_arr):
 def main():
     p1 = 0
     p2 = 0
-    with open("21.txt", "r") as f:
+    with open("./input/2.txt", "r") as f:
         for line in f:
             words = line.split()
             int_arr = []

@@ -1,17 +1,17 @@
 rules = []
 
-test_r = "5r-small.txt"
-test = "5-small.txt"
+test_r = "5r-small"
+test = "5-small"
 
-real_r = "5r.txt"
-real = "5.txt"
-with open(f"{real_r}", "r") as f:
+real_r = "5r"
+real = "5"
+with open(f"./input/{real_r}.txt", "r") as f:
     for line in f:
         nums = line.strip("\n").split("|")
         rules.append(nums)
 
 text = []
-with open(f"{real}", "r") as f:
+with open(f"./input/{real}.txt", "r") as f:
     for line in f:
         t = line.strip("\n").split(",")
         text.append(t)

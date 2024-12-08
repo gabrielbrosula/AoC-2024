@@ -164,5 +164,5 @@ def p2():
 
   return sum
 
-#print(p1())
+print(p1())
 print(p2())

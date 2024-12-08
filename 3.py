@@ -1,7 +1,7 @@
 import re
 
 s = ""
-with open("31.txt", "r") as f:
+with open("./input/3.txt", "r") as f:
     lines = f.readlines()
     s = "".join(lines)
 
