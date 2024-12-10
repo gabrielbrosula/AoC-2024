@@ -21,19 +21,19 @@ with open(f'./input/{real}.txt', 'r') as f:
             file_idx += 1
 
 def p1():
-    write_ptr = disk_map1.index('.')
-    read_ptr = len(disk_map1) - 1
+    left_ptr = disk_map1.index('.')
+    right_ptr = len(disk_map1) - 1
     compressed = copy.copy(disk_map1)
-    while read_ptr > write_ptr:
-        if disk_map1[read_ptr] != '.' and disk_map1[write_ptr] == '.':
-            compressed[write_ptr] = disk_map1[read_ptr]
-            compressed[read_ptr] = '.'
-            write_ptr += 1
-            read_ptr -= 1
-        elif disk_map1[read_ptr] != '.' and disk_map1[write_ptr] != '.':
-            write_ptr += 1
-        elif disk_map1[read_ptr] == '.':
-            read_ptr -= 1
+    while right_ptr > left_ptr:
+        if disk_map1[right_ptr] != '.' and disk_map1[left_ptr] == '.':
+            compressed[left_ptr] = disk_map1[right_ptr]
+            compressed[right_ptr] = '.'
+            left_ptr += 1
+            right_ptr -= 1
+        elif disk_map1[right_ptr] != '.' and disk_map1[left_ptr] != '.':
+            left_ptr += 1
+        elif disk_map1[right_ptr] == '.':
+            right_ptr -= 1
 
     checksum = 0
     # Get the input from 0 to the first occurrence of '.', exclusive
