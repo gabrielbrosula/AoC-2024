@@ -1,6 +1,3 @@
-from sortedcontainers import SortedList
-import copy
-
 day = "10"
 test = f"{day}-small"
 mini = f"{day}-mini"
