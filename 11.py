@@ -1,5 +1,5 @@
 from tqdm import tqdm
-import math
+import functools
 
 day = "11"
 test = f"{day}-small"
@@ -46,6 +46,7 @@ def get_num_digits(n):
     return digits
 
 def p2():
+    @functools.cache
     def solve(x, blinks):
         nd = get_num_digits(x)
         if blinks == 0:
@@ -64,7 +65,7 @@ def p2():
 
     s = 0
     for x in nums_input:
-        res = solve(x, 25)
+        res = solve(x, 75)
         s += res
 
     print(s)
